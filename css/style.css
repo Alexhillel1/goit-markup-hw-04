@@ -7,6 +7,7 @@
   --footer-color: rgba(255, 255, 255, 0.6);
   --dark-color: #000;
   --white-color: #fff;
+  --border-color: #eeeeee;
 }
 body {
   font-family: 'Roboto', sans-serif;
@@ -92,12 +93,34 @@ button {
   color: var(--acent-color);
 }
 
+.nav-flex {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-menu {
+  display: flex;
+  margin-left: 93px;
+}
+
+.header-menu .header-menu-item:not(:last-child) {
+  margin-right: 40px;
+}
+
 .header-menu-link {
+  display: block;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--title-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-menu-link:hover,
@@ -110,6 +133,16 @@ button {
 }
 
 /*------------------------------------------------------------------------------Contact---------------------------------------------------------------------*/
+
+.header-contact {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-contact .header-contact-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .header-contact-link {
   font-weight: 500;
   line-height: 1.14;
@@ -138,7 +171,10 @@ button {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-color);
-  margin-bottom: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+  max-width: 696px;
 }
 
 .btn-hero {
@@ -168,6 +204,18 @@ button {
   margin-bottom: 50px;
 }
 
+.about-list {
+  display: flex;
+}
+
+.about-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about-list-item {
+  max-width: 270px;
+}
+
 .about-list-item h3 {
   font-size: 14px;
   line-height: 1.14;
@@ -180,12 +228,29 @@ button {
   line-height: 1.71;
 }
 
+.about-img {
+  display: flex;
+}
+
+.about-img-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about-img-item img {
+  display: block;
+}
+
 /*-----------------------------------------------------------------------------About-end--------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------------Team-start--------------------------------------------------------------------*/
 .section-team {
   background-color: var(--bg-team-color);
   padding-top: 94px;
+}
+
+.team-list {
+  display: flex;
+  text-align: center;
 }
 
 .title-team {
@@ -196,8 +261,19 @@ button {
   margin-bottom: 50px;
 }
 
+.team-item {
+  background-color: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .team-item img {
-  margin-bottom: 30px;
+  display: block;
 }
 .team-item h3 {
   font-weight: 500;
@@ -211,6 +287,15 @@ button {
   font-size: 16px;
   line-height: 1.18;
 }
+
+.team-sub {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
 /*-----------------------------------------------------------------------------Team-end---------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------------Footer-start---------------------------------------------------------------------*/
@@ -264,6 +349,15 @@ button {
   padding-top: 94px;
 }
 
+.portfolio-filter {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .btn-filter {
   font-weight: 500;
   font-size: 16px;
@@ -290,6 +384,24 @@ button {
   margin-bottom: 50px;
 }
 
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  /*Половина от нужного 30px*/
+  margin: -15px;
+}
+
+.portfolio-item {
+  max-width: 370px;
+  /* width: calc((100% - 60px) / 3); */
+  /*Половина от нужного 30px*/
+  margin: 15px;
+}
+
+.portfolio-item img {
+  display: block;
+}
+
 .portfolio a {
   text-decoration: none;
 }
@@ -299,12 +411,20 @@ button {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-color);
+  margin-bottom: 4px;
 }
 
 .portfolio-item p {
   font-size: 16px;
   line-height: 1.87;
   color: var(--txt-color);
+}
+
+.sub-portfolio {
+  padding: 20px 24px;
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 /*-----------------------------------------------------------------------------Portfolio-end---------------------------------------------------------------------*/
