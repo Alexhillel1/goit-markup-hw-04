@@ -8,6 +8,16 @@
   --black-color: #000;
   --footer-color: rgba(255, 255, 255, 0.6);
 }
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--sub-color);
@@ -16,27 +26,35 @@ body {
   font-size: 14px;
 }
 
+/* Стили для обнуления верхних отступов у элементов */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p,
+p {
+  margin-top: 0;
+}
+/* Класс для обнуления базовых свойств у списков (ul) */
 ul {
-  padding: 0;
+  list-style: none;
+  padding-left: 0;
   margin: 0;
 }
-
-ul,
-ol,
-li {
-  list-style: none;
-}
-
+/* Класс для обнуления базовых свойств у ссылок */
 a {
   text-decoration: none;
+  color: inherit;
 }
+/* Свойства для корректного отображения картинок */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* Свойства для обнуления курсива у address */
+
 address {
   font-style: inherit;
 }
@@ -228,6 +246,10 @@ address {
   margin-bottom: 50px;
 }
 
+.section-how {
+  padding-top: 0;
+}
+
 .how {
   display: flex;
   align-items: center;
@@ -330,7 +352,7 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .portfolio-filter li:not(:last-child) {
