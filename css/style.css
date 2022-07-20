@@ -342,11 +342,11 @@ address {
 }
 
 .team-link-icon {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 100%;
+  height: 100%;
   fill: var(--icon-color);
 }
 
@@ -426,6 +426,7 @@ address {
 
 .footer-inner {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-contact-box {
@@ -485,11 +486,11 @@ address {
   margin-right: 10px;
 }
 .footer-soc-link {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background-color: var(--icon-clor-bg-footer);
   fill: var(--white-color);
